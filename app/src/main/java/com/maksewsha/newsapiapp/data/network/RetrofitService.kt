@@ -5,6 +5,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface RetrofitService {
 
@@ -24,6 +25,6 @@ interface RetrofitService {
         }
     }
 
-    @GET("/v2/everything?q=bitcoin&apiKey=d6d9fa01075048f8b3cd7fdac13f8aab")
-    fun getEverything(): Call<ArticlesResp>
+    @GET("/v2/everything?apiKey=d6d9fa01075048f8b3cd7fdac13f8aab")
+    fun getEverything(@Query("q") news: String): Call<ArticlesResp>
 }

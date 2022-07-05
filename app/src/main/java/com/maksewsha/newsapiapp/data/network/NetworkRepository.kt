@@ -9,8 +9,8 @@ class NetworkRepository(private val retrofitService: RetrofitService) {
 
     private val dataMapper = DataMapper()
 
-    fun getEverything(): AnswerDomain{
-        val response = retrofitService.getEverything().execute()
+    fun getEverything(news:String): AnswerDomain{
+        val response = retrofitService.getEverything(news).execute()
         Log.d("tag", response.body().toString())
         return if (response.isSuccessful && response.code() < 400){
             dataMapper.toEntity(NetworkAnswer.Success(response.body()!!))

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NewsApiApp</string>
+    <string name="alert_title">Input news theme</string>
+    <string name="alert_positive">Search</string>
+    <string name="alert_negative">Close</string>
+
+    <string name="search_welcome_text">To search for news use the button on the top-right</string>
 </resources>

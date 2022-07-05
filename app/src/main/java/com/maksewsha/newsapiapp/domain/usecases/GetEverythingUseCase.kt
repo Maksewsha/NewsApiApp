@@ -6,5 +6,5 @@ import com.maksewsha.newsapiapp.data.network.RetrofitService
 import com.maksewsha.newsapiapp.domain.models.AnswerDomain
 
 class GetEverythingUseCase(private val networkRepository: NetworkRepository) {
-    fun execute() = networkRepository.getEverything()
+    fun execute(news:String) = networkRepository.getEverything(news)
 }

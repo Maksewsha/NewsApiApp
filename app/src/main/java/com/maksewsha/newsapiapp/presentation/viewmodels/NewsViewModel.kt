@@ -22,9 +22,9 @@ class NewsViewModel(private val getEverythingUseCase: GetEverythingUseCase) : Vi
 
     private val mapper = PresentationMapper()
 
-    fun getNews() {
+    fun getNews(news: String) {
         CoroutineScope(Dispatchers.IO).launch {
-            val response = mapper.toEntity(getEverythingUseCase.execute())
+            val response = mapper.toEntity(getEverythingUseCase.execute(news))
             when (response) {
                 is AnswerPresentation.Success -> {
                     _news.postValue(response.data)
