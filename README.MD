@@ -1,0 +1,2 @@
+# NewsApiApp - is an app using to fetch news from newsapi.org
+Used **Glide** to work with images, **Retrofit** to fetch data from net, **Coroutines** for async work on back-thread, **Gson** for serialization.
